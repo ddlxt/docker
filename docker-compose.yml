@@ -2,7 +2,7 @@ version: '3'
 services:
   webapp:
     build: .
-    image: yang3498/web_docker-webapp:latest
+    image: ddlxt/lxt_web_docker-webapp:latest
     ports:
       - "8080:8080"
     depends_on:
@@ -14,7 +14,7 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=20050303YMZ
   db:
-    image: yang3498/web_docker-db-with-data:latest
+    image: ddlxt/lxt_mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: 20050303YMZ
       MYSQL_DATABASE: hospital_managerment
